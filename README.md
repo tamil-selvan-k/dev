@@ -16,7 +16,7 @@ I enjoy working across frontend, backend, and cloud environments, and I’m **ea
 
 ## 🛠 Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript, React  
+- **Frontend:** React, JavaScript, HTML, CSS,
 - **Backend:** Node.js, Express  
 - **Databases:** MongoDB, MySQL, AWS RDS  
 - **Cloud & DevOps:** AWS, Docker (basics), CI/CD (basics)
