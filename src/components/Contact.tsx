@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 const Contact = () => {
+  const BACKEND = import.meta.env.VITE_BACKEND_URL;
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
@@ -37,7 +39,7 @@ const Contact = () => {
 
     try {
       // Send email via FormSubmit or email service
-      const response = await fetch("http://localhost:5000/contact", {
+      const response = await fetch(`${BACKEND}/contact`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
