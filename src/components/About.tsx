@@ -27,7 +27,7 @@ const About = () => {
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Through multiple internships, I've gained practical experience with <span className="text-foreground font-medium">cloud deployment, AWS services, and CI/CD pipelines</span>. I'm a strong problem solver with competitive programming exposure, having solved 1800+ problems.
+                Through multiple internships, I've gained practical experience with <span className="text-foreground font-medium">cloud deployment and AWS services</span>. I'm a strong problem solver with competitive programming exposure, having solved 1800+ problems.
               </p>
               
               <p className="text-lg text-primary font-medium">
