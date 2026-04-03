@@ -13,11 +13,11 @@ const skillCategories = [
   },
   {
     title: "Databases",
-    skills: ["MongoDB", "MySQL", "AWS RDS"],
+    skills: ["MongoDB", "MySQL"],
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS (EC2, S3, RDS, Amplify)", "AWS Security (IAM)", "Docker Basics", "CI/CD Pipelines", "Linux Basics"],
+    skills: ["AWS (EC2, S3, Amplify)", "AWS Security (IAM)", "Docker Basics", "Linux Basics"],
   },
   {
     title: "Tools",
