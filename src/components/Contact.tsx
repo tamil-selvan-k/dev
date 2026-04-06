@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 const Contact = () => {
-  const BACKEND = import.meta.env.VITE_BACKEND_URL;
+  const BACKEND = import.meta.env.VITE_BACKEND_URL?.replace(/\/$/, "");
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -38,7 +38,10 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Send email via FormSubmit or email service
+      if (!BACKEND) {
+        throw new Error("Backend URL is not configured.");
+      }
+
       const response = await fetch(`${BACKEND}/contact`, {
         method: "POST",
         body: JSON.stringify(formData),
@@ -60,12 +63,30 @@ const Contact = () => {
           setSubmitSuccess(false);
         }, 3000);
       } else {
-        throw new Error("Failed to send");
+        let errorMessage = `Request failed with status ${response.status}`;
+
+        try {
+          const data = await response.json();
+          if (data?.message) {
+            errorMessage = data.message;
+          }
+        } catch {
+          const text = await response.text();
+          if (text) {
+            errorMessage = text;
+          }
+        }
+
+        throw new Error(errorMessage);
       }
-    } catch {
+    } catch (error) {
+      const description =
+        error instanceof Error ? error.message : "Failed to send message. Please try emailing directly.";
+
+      console.error("Contact form submission failed:", error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try emailing directly.",
+        description,
         open: true,
       });
     } finally {
