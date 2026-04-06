@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowDown, CloudDownload } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+
+const heroTooltipClassName =
+  "rounded-sm border border-white/10 bg-[#2b2b2b] px-3 py-1.5 text-xs font-medium text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-sm";
 
 const Hero = () => {
   return (
@@ -74,40 +78,71 @@ const Hero = () => {
               transition={{ delay: 0.7, duration: 0.6 }}
               className="flex items-center justify-center gap-4 w-full"
             >
-              <a
-                href="https://github.com/tamil-selvan-k"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="icon-link"
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-              <a 
-                href="./TamilSelvan_Resume.pdf" 
-                download={'TamilSelvan_Resume.pdf'}
-                target="_blank"
-                className="icon-link"
-                aria-label="Download Resume"
-              >
-                <CloudDownload className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tamilselvan2007"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="icon-link"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="#contact"
-                className="icon-link"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://github.com/tamil-selvan-k"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-link"
+                    aria-label="GitHub"
+                  >
+                    <Github className="w-5 h-5" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="top" className={heroTooltipClassName}>
+                  <p>GitHub</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="./TamilSelvan_Resume.pdf" 
+                    download={'TamilSelvan_Resume.pdf'}
+                    target="_blank"
+                    className="icon-link"
+                    aria-label="Download Resume"
+                  >
+                    <CloudDownload className="w-5 h-5" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="top" className={heroTooltipClassName}>
+                  <p>Download Resume</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="https://www.linkedin.com/in/tamilselvan2007"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon-link"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="top" className={heroTooltipClassName}>
+                  <p>LinkedIn</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href="#contact"
+                    className="icon-link"
+                    aria-label="Email"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent side="top" className={heroTooltipClassName}>
+                  <p>Contact</p>
+                </TooltipContent>
+              </Tooltip>
             </motion.div>
           </motion.div>
 
