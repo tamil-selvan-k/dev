@@ -49,7 +49,7 @@ const projects = [
       "A lightweight chatbot designed for technical learning. Provides optimized responses using local data processing for quick, relevant answers.",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/tamil-selvan-k/Tekh-bot",
-    liveUrl: 'https://tamil-selvan-k.github.io/Tekh-bot'
+    liveUrl: 'https://tamil-selvan-k.github.io/Tekh-bot/client'
   },
   {
     title: "ShadowTrace",
