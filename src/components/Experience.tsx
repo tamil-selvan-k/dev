@@ -9,14 +9,7 @@ const experiences = [
     company: "Klickkit",
     description:
       "Optimized and enhanced responsive UIs for production applications while designing well-structured databases and developing scalable, optimized backend services using Node.js and Express. Collaborated closely with the testing team to validate features using Selenium and improve system reliability. Deployed applications to cloud infrastructure, gaining strong practical understanding of cloud environments and performance optimization.",
-    highlights: ["Production Apps", "Node.js & Express", "Selenium Testing", "Cloud Deployment"],
-  },
-  {
-    title: "Full Stack Developer Intern",
-    company: "Vittae Money",
-    description:
-      "Improved backend performance by 10% through code optimization and efficient database queries. Built scalable backend services and worked extensively with AWS services including EC2 and S3. Contributed to production-ready systems handling real user traffic.",
-    highlights: ["10% Performance Boost", "AWS (EC2, S3)", "Scalable Architecture", "Production Systems"],
+    highlights: ["Production Systems", "Node.js & Express", "React JS", "Scalable Architecture", "Cloud Deployment"],
   },
   {
     title: "Web Developer Intern",
